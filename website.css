@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    z-index: 0;
+    padding: 300px;
+        }
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+        header {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between left and right */
+            align-items: center; /* Center items vertically */
+            background: #000000; /* Solid background color */
+            color: #ffffff; /* Text color */
+            padding: 5px 10px; /* Padding for the header */
+            position: fixed; /* Fixed positioning */
+            top: 0; /* Stick to the top of the viewport */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            z-index: 1000; /* Ensure it stays above other content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+        
+        header.transparent {
+            background: #00000073; /* Semi-transparent background (70% opacity) */
+            box-shadow: none; /* No shadow when transparent */
+        }
+        
+        .header-left h1 {
+            margin: 0; /* Remove default margin */
+        }
+        .header-left a {
+            text-decoration: none; /* Remove underline from the link */
+            color: #ffffff; /* Set text color to white or any desired color */
+        }
+        
+        .header-left a:hover {
+            color: #e0e0e0; /* Change color on hover for better visibility */
+        }
+        
+        .header-right {
+            display: flex; /* Display links in a row */
+        }
+        
+        .header-right a {
+            margin-left: 60px; /* Space between categories */
+            color: #ffffff; /* Link color */
+            text-decoration: none; /* Remove underline from links */
+        }
+        @media (max-width: 768px) { /* Adjust the max-width as needed */
+            .header-right a {
+                margin-left: 30px; /* Change margin-left to auto on smaller screens */
+            }
+        }
+        
+        .header-right a:hover {
+            text-decoration: none; /* Underline on hover */
+        }
+        
+        .hero {
+            background-image: url(Home2.png);
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* White text for contrast */
+            padding: 10px 20px; /* Generous padding for a spacious feel */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: flex-start; /* Align items to the left */
+            border-radius: 0; /* No rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+            padding-left: 40px; /* Add left padding for better alignment */
+        }
+        
+        .hero h2 {
+            font-size: 3em; /* Increased font size for the heading */
+            margin-bottom: 15px; /* Space below the heading */
+            font-weight: bold; /* Bold font for emphasis */
+        }
+        
+        .hero p {
+            font-size: 1.5em; /* Increased font size for the paragraph */
+            margin-bottom: 30px; /* Space below the paragraph */
+            line-height: 1.5; /* Improved line height for readability */
+        }
+        
+        .cta-button {
+            display: inline-block; /* Inline block for button styling */
+            padding: 12px 30px; /* Padding for the button */
+            background: #ffffff9d; /* White background for the button */
+            color: #000000; /* Text color matching the gradient */
+            text-decoration: none; /* Remove underline from the link */
+            border-radius: 5px; /* Rounded corners for the button */
+            font-size: 1em; /* Font size for the button */
+            transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for the button */
+        }
+        
+        .cta-button:hover {
+            background: #e0e0e0; /* Light gray background on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+        h1{
+            margin-top: 50px;
+        }
+        img {
+            margin-top: 20px;
+            align-items: center;
+            width: 250px;
+            height: auto;
+        }
+        #about {
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 200px;
+        }
+        #projects {
+            margin: 0;
+            padding: 30px;
+            margin-top: 0px;
+            margin-bottom: 150px;
+            text-align: center;
+            color: #000000;
+            background-color: #cfc7c7;  
+        }
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            padding: 0;
+            border: 5px solid #0d19c5cc;
+            box-shadow: 0 0 20px #0d10c5cc, 0 0 30px #0d19c580;
+        }
+
+        .image-slider {
+            display: flex;
+            align-items: center;
+        }
+        
+        .scroll-button {
+            background-color: #000000; /* Set your desired background color */
+            color: #ffffff; /* Set text color */
+            border: none; /* Remove border */
+            cursor: pointer;
+            padding: 10px 15px; /* Adjust padding for better appearance */
+            border-radius: 4px;
+            margin: 0 5px;
+            font-size: 18px;
+            transition: background-color 0.3s; /* Add transition for hover effect */
+        }
+        
+        .scroll-button:hover {
+            background-color: #8f8e91; /* Darker shade for hover effect */
+        }
+        
+        .image-container {
+            display: flex;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            padding: 50px;
+            scrollbar-width: none; /* For Firefox */
+        }
+
+        
+        
+        .image-container::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+        
+        .image-container img {
+            margin-right: 20px;
+            border-radius: 8px;
+            width: 398px; /* Set a fixed width */
+            height: 400px; /* Set a fixed height */
+            object-fit: cover; /* Ensure images cover the area without stretching */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+        
+        /* Hover effect for individual images */
+        .image-container img:hover {
+            transform: scale(1.1); /* Scale up the hovered image */
+            z-index: 1; /* Bring the hovered image to the front */
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0; /* Align to the left */
+            top: 0; /* Align to the top */
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            padding: 0; /* Remove any padding */
+            margin: 0; /* Remove any margin */
+        }
+        .modal-content {
+            display: block; /* Ensure it behaves as a block element */
+            width: auto; /* Max width of the modal image */
+            height: 95%; /* Max height of the modal image */
+            margin: auto; /* Center the image within the modal */
+            position: relative; /* Position relative for centering */
+            top: 50%; /* Move down by 50% of the modal height */
+            transform: translateY(-50%); /* Adjust back up by 50% of the image height */
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #contact {
+            padding: 40px 20px; /* Padding for the contact section */
+            text-align: center; /* Center the text */
+            background-color: #f9f9f9; /* Light background color */
+        }
+        
+        .contact-icons {
+            margin: 20px 0; /* Margin for spacing */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Arrange items in a column */
+            align-items: center; /* Center items horizontally */
+        }
+        
+        .contact-icon {
+            margin: 10px 0; /* Space between icons vertically */
+            font-size: 1.5em; /* Size of the icons */
+            color: #446ad1; /* Icon color */
+            text-decoration: none; /* Remove underline */
+            display: flex; /* Use flexbox for icon and text */
+            align-items: center; /* Center items vertically */
+        }
+        
+        .contact-icon span {
+            margin-left: 8px; /* Space between icon and text */
+            font-size: 1em; /* Font size for the text */
+        }
+        
+        .contact-icon:hover {
+            color: #5f0fe0; /* Change color on hover */
+        }
+
+        footer {
+            text-align: center; /* Center the text */
+            padding: 10px; /* Adjust padding as needed */
+            color: #000000; /* Text color */
+            width: 1000; /* Use viewport width to ensure it stretches across the screen */
+            position: relative; /* This allows it to stay at the bottom of the content */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            margin: 0; /* Removes any margin */
+        }

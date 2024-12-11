@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacuman's portfolio</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#hero" style="text-decoration: none; color: inherit;">
+                <h1>coconati</h1>
+            </a>
+        </div>
+    <div class="header-right">
+        <ul>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </ul>
+    </div>
+    </header>
+
+    <div id="hero" class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm a passionate artist and developer. Explore my work below!</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </div>
+    
+    <div id="projects">
+        <h1>Projects</h1>
+        <p>The pictures below are the arts that I made in recent years.</p>
+        
+        <h2>Digital Artwork</h2>
+        <div class="image-slider">
+            <button class="scroll-button" id="scroll-left">←</button>
+            <div class="image-container" id="imageContainer">
+                <img src="Avi.png" alt="Image 1" class="clickable-image" onclick="openModal(this)">
+                <img src="Raiden.png" alt="Image 2" class="clickable-image" onclick="openModal(this)">
+                <img src="GokuMUI.png" alt="Image 3" class="clickable-image" onclick="openModal(this)">
+                <img src="LUCY.png" alt="Image 4" class="clickable-image" onclick="openModal(this)">
+                <img src="Makima.png" alt="Image 5" class="clickable-image" onclick="openModal(this)">
+                <img src="Nemo.png" alt="Image 6" class="clickable-image" onclick="openModal(this)">
+                <img src="SHE-RA.png" alt="Image 7" class="clickable-image" onclick="openModal(this)">
+                <img src="AdventureTime.png" alt="Image 8" class="clickable-image" onclick="openModal(this)">
+            </div>
+            <button class="scroll-button" onclick="scrollRight()">→</button>
+        </div>
+        
+        <h2>Traditional Artwork</h2>
+        <div class="image-slider">
+            <button class="scroll-button" id="scroll-left-2">←</button>
+            <div class="image-container" id="imageContainer2">
+                <img src="JJK.jpg" alt="Image 9" class ="clickable-image" onclick="openModal(this)">
+                <img src="Gogeta.jpg" alt="Image 10" class="clickable-image" onclick="openModal(this)">
+                <img src="Tomie.jpg" alt="Image 11" class="clickable-image" onclick="openModal(this)">
+                <img src="Spiderman2099.jpg" alt="Image 12" class="clickable-image" onclick="openModal(this)">
+                <img src="SpidermanINDIA.jpg" alt="Image 13" class="clickable-image" onclick="openModal(this)">
+                <img src="Yelan.jpg" alt="Image 14" class="clickable-image" onclick="openModal(this)">
+            </div>
+            <button class="scroll-button" id="scroll-right-1">→</button>
+        </div>
+    
+        <h2>3D Artwork</h2>
+        <div class="image-slider">
+            <button class="scroll-button" id="scroll-left-2">←</button>
+            <div class="image-container" id="imageContainer3D">
+                <img src="Hacuman-Storefront.png" alt="Image 15" class="clickable-image" onclick="openModal(this)">
+                <img src="Hacuman_Isometric_Room.png" alt="Image 16" class="clickable-image" onclick="openModal(this)">
+                <img src="Lantern.png" alt="Image 17" class="clickable-image" onclick="openModal(this)">
+                <img src="Avatar.png" alt="Image 18" class="clickable-image" onclick="openModal(this)">
+            </div>
+            <button class="scroll-button" id="scroll-right-1">→</button>
+        </div>
+    </div>
+
+    <div id="about">
+        <img src="dabid.jpg" alt="alternate text" class="profile-image responsive">
+        <h1>Nathaniel Hacuman</h1>
+        <p>I'm Nathaniel Hacuman, 21 years old, from Brgy. Loma, Biñan City, Laguna.</p>
+        <p>and I like to make traditional, digital arts. I'm also interested in 3D Arts. I am a</p>
+        <p>third-year college student currently studying at STI College Sta. Rosa.</p>
+    </div>
+    
+    <div id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please reach out via:</p>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/nathanieldavid.hacumanII" target="_blank" class="contact-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/nthandvid/profilecard/?igsh=bGhlZTV1amo4MjF0" target="_blank" class="contact-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.deviantart.com/coconathi" target="_blank" class="contact-icon" aria-label="DeviantArt">
+                <i class="fab fa-deviantart"></i>
+                <span>DeviantArt</span>
+            </a>
+            <div class="contact-icon" aria-label="Phone">
+                <i class="fas fa-phone-alt"></i>
+                <span>09565160944</span>
+            </div>
+</div>
+    
+<div id="footer">
+    <footer>
+        <p>&copy; 2024 Nathaniel Hacuman.</p>
+    </footer>
+</div>
+    
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+<script src="websitejavascript.js"></script>  
+    </body>
+    </html>
